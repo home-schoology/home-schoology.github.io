@@ -7,4 +7,4 @@ permalink: /test/
   let win = window.open();
   win.document.write(/index.html)
   </script>
-  <a onclick="aboutblank();"></a>
+  <a onclick="aboutblank();">ocfhfovhi</a>
