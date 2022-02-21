@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+ <head>
+  <meta charset="utf-8"/>
+  <meta charset="utf-8"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" name="viewport"/>
+  <title>
+   Cut the Rope Experiments (HTML5 edition)
+  </title>
+  <script>
+   !function(e, n, t) {
+      function r (e) {
+        var n = h.className, t = b._config.classPrefix || "";
+        if (C && (n = n.baseVal), b._config.enableJSClass) {
+          var r = new RegExp("(^|\\s)" + t + "no-js(\\s|$)");
+          n = n.replace(r, "$1" + t + "js$2")
+        }
+        b._config.enableClasses && (n += " " + t + e.join(" " + t), C ? h.className.baseVal = n : h.className = n)
+      }
+
+      function o (e, n) {return typeof e === n}
+
+      function s () {
+        var e, n, t, r, s, i, a;
+        for (var l in x) if (x.hasOwnProperty(l)) {
+          if (e = [], n = x[l], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (t = 0; t < n.options.aliases.length; t++) e.push(n.options.aliases[t].toLowerCase());
+          for (r = o(n.fn, "function") ? n.fn() : n.fn, s = 0; s < e.length; s++) i = e[s], a = i.split("."), 1 === a.length ? b[a[0]] = r : (!b[a[0]] || b[a[0]] instanceof Boolean || (b[a[0]] = new Boolean(b[a[0]])), b[a[0]][a[1]] = r), y.push((r ? "" : "no-") + a.join("-"))
+        }
+      }
+
+      function i () {return "function" != typeof n.createElement ? n.createElement(arguments[0]) : C ? n.createElementNS.call(n, "http://www.w3.org/2000/svg", arguments[0]) : n.createElement.apply(n, arguments)}
+
+      function a (e) {return e.replace(/([a-z])-([a-z])/g, function(e, n, t) {return n + t.toUpperCase()}).replace(/^-/, "")}
+
+      function l (e, n) {return !!~("" + e).indexOf(n)}
+
+      function f (e, n) {return function() {return e.apply(n, arguments)}}
+
+      function u (e, n, t) {
+        var r;
+        for (var s in e) if (e[s] in n) return t === !1 ? e[s] : (r = n[e[s]], o(r, "function") ? f(r, t || n) : r);
+        return !1
+      }
+
+      function p (e) {return e.replace(/([A-Z])/g, function(e, n) {return "-" + n.toLowerCase()}).replace(/^ms-/, "-ms-")}
+
+      function d () {
+        var e = n.body;
+        return e || (e = i(C ? "svg" : "body"), e.fake = !0), e
+      }
+
+      function c (e, t, r, o) {
+        var s, a, l, f, u = "modernizr", p = i("div"), c = d();
+        if (parseInt(r, 10)) for (; r--;) l = i("div"), l.id = o ? o[r] : u + (r + 1), p.appendChild(l);
+        return s = i("style"), s.type = "text/css", s.id = "s" + u, (c.fake ? c : p).appendChild(s), c.appendChild(p), s.styleSheet ? s.styleSheet.cssText = e : s.appendChild(n.createTextNode(e)), p.id = u, c.fake && (c.style.background = "", c.style.overflow = "hidden", f = h.style.overflow, h.style.overflow = "hidden", h.appendChild(c)), a = t(p, e), c.fake ? (c.parentNode.removeChild(c), h.style.overflow = f, h.offsetHeight) : p.parentNode.removeChild(p), !!a
+      }
+
+      function v (n, r) {
+        var o = n.length;
+        if ("CSS" in e && "supports" in e.CSS) {
+          for (; o--;) if (e.CSS.supports(p(n[o]), r)) return !0;
+          return !1
+        }
+        if ("CSSSupportsRule" in e) {
+          for (var s = []; o--;) s.push("(" + p(n[o]) + ":" + r + ")");
+          return s = s.join(" or "), c("@supports (" + s + ") { #modernizr { position: absolute; } }", function(e) {return "absolute" == getComputedStyle(e, null).position})
+        }
+        return t
+      }
+
+      function m (e, n, r, s) {
+        function f () {p && (delete z.style, delete z.modElem)}
+
+        if (s = o(s, "undefined") ? !1 : s, !o(r, "undefined")) {
+          var u = v(e, r);
+          if (!o(u, "undefined")) return u
+        }
+        for (var p, d, c, m, g, y = ["modernizr", "tspan"]; !z.style;) p = !0, z.modElem = i(y.shift()), z.style = z.modElem.style;
+        for (c = e.length, d = 0; c > d; d++) if (m = e[d], g = z.style[m], l(m, "-") && (m = a(m)), z.style[m] !== t) {
+          if (s || o(r, "undefined")) return f(), "pfx" == n ? m : !0;
+          try {z.style[m] = r} catch (h) {}
+          if (z.style[m] != g) return f(), "pfx" == n ? m : !0
+        }
+        return f(), !1
+      }
+
+      function g (e, n, t, r, s) {
+        var i = e.charAt(0).toUpperCase() + e.slice(1), a = (e + " " + E.join(i + " ") + i).split(" ");
+        return o(n, "string") || o(n, "undefined") ? m(a, n, r, s) : (a = (e + " " + _.join(i + " ") + i).split(" "), u(a, n, t))
+      }
+
+      var y = [], h = n.documentElement, C = "svg" === h.nodeName.toLowerCase(), x = [], w = {
+        _version: "3.2.0",
+        _config: {classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0},
+        _q: [],
+        on: function(e, n) {
+          var t = this;
+          setTimeout(function() {n(t[e])}, 0)
+        },
+        addTest: function(e, n, t) {x.push({name: e, fn: n, options: t})},
+        addAsyncTest: function(e) {x.push({name: null, fn: e})}
+      }, b = function() {};
+      b.prototype = w, b = new b, b.addTest("canvas", function() {
+        var e = i("canvas");
+        return !(!e.getContext || !e.getContext("2d"))
+      }), b.addTest("webgl", function() {
+        var n = i("canvas"), t = "probablySupportsContext" in n ? "probablySupportsContext" : "supportsContext";
+        return t in n ? n[t]("webgl") || n[t]("experimental-webgl") : "WebGLRenderingContext" in e
+      }), b.addAsyncTest(function() {
+        if (b.webglextensions = new Boolean(!1), b.webgl) {
+          var e, n, r;
+          try {e = i("canvas"), n = e.getContext("webgl") || e.getContext("experimental-webgl"), r = n.getSupportedExtensions()} catch (o) {return}
+          n !== t && (b.webglextensions = new Boolean(!0));
+          for (var s = -1, a = r.length; ++s < a;) b.webglextensions[r[s]] = !0;
+          e = t
+        }
+      });
+      var S = "Moz O ms Webkit", _ = w._config.usePrefixes ? S.toLowerCase().split(" ") : [];
+      w._domPrefixes = _;
+      var E = w._config.usePrefixes ? S.split(" ") : [];
+      w._cssomPrefixes = E;
+      var T = function(n) {
+        var r, o = prefixes.length, s = e.CSSRule;
+        if ("undefined" == typeof s) return t;
+        if (!n) return !1;
+        if (n = n.replace(/^@/, ""), r = n.replace(/-/g, "_").toUpperCase() + "_RULE", r in s) return "@" + n;
+        for (var i = 0; o > i; i++) {
+          var a = prefixes[i], l = a.toUpperCase() + "_" + r;
+          if (l in s) return "@-" + a.toLowerCase() + "-" + n
+        }
+        return !1
+      };
+      w.atRule = T;
+      var P = {elem: i("modernizr")};
+      b._q.push(function() {delete P.elem});
+      var z = {style: P.elem.style};
+      b._q.unshift(function() {delete z.style}), w.testAllProps = g;
+      var L = w.prefixed = function(e, n, t) {return 0 === e.indexOf("@") ? T(e) : (-1 != e.indexOf("-") && (e = a(e)), n ? g(e, n, t) : g(e, "pfx"))};
+      b.addTest("requestanimationframe", !!L("requestAnimationFrame", e), {aliases: ["raf"]}), s(), r(y), delete w.addTest, delete w.addAsyncTest;
+      for (var N = 0; N < b._q.length; N++) b._q[N]();
+      e.Modernizr = b
+    }(window, document)
+  </script>
+  <script data-gid="40337" src="gamepix.sdk.js">
+  </script>
+  <style type="text/css">
+   body, html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        touch-action: none;
+        -ms-touch-action: none;
+        overflow: hidden;
+        background: url(tilebg.jpg);
+        background-repeat:   repeat;
+    }
+    
+    canvas {
+        -ms-touch-action: none;
+        touch-action: none;
+        -ms-content-zooming: none;
+        content-zooming: none
+    }
+    .ctrCursor {
+        cursor: url(cursors/cursor.cur), url(cursors/cursor.png), auto
+    }
+  </style>
+ </head>
+ <body class="ctrCursor">
+  <canvas id="canvas">
+  </canvas>
+  <script type="text/javascript">
+   "use strict";
+
+function isLandscape () {
+  var e = !(window.innerHeight > window.innerWidth);
+  return e
+}
+
+function handleVisibilityChange () {if (document[hidden_gpx]) try {GamePix.on.soundOff()} catch (e) {} else try {GamePix.on.soundOn()} catch (e) {}}
+
+function resizeTheGame () {checkOrientation(), canvas.style.top = window.innerHeight / 2 + "px", canvas.style.left = window.innerWidth / 2 + "px", canvas.style.marginTop = -1 * (height / 2) + "px", canvas.style.marginLeft = -1 * (width / 2) + "px", canvas.style.width = width + "px", canvas.style.height = height + "px", window.scroll(0, 1)}
+
+function onResourcesLoaded () {
+  if (resourceCount -= 1, 0 === resourceCount) {
+    checkOrientation(), canvas.style.position = "relative", canvas.style.top = window.innerHeight / 2 + "px", canvas.style.left = window.innerWidth / 2 + "px", canvas.style.marginTop = -1 * (height / 2) + "px", canvas.style.marginLeft = -1 * (width / 2) + "px";
+    var e = window.devicePixelRatio;
+    e > 2 && (e = 2), GamePix.game.gameLoaded(function() {Module.callMain([width * e + "", height * e + ""]), resizeTheGame()}), canvas.style.width = width + "px", canvas.style.height = height + "px", window.onresize = function() {resizeTheGame()}
+  }
+}
+
+function loadScript (e) {
+  var t = document.createElement("script");
+  t.setAttribute("type", "text/javascript"), t.setAttribute("src", e), "undefined" != typeof t && document.getElementsByTagName("head")[0].appendChild(t)
+}
+
+function checkOrientation () {isMobile ? isLandscape() === !0 ? (height = window.innerHeight, width = height * ratio, width > window.innerWidth && (width = window.innerWidth, height = window.innerWidth / ratio)) : (width = window.innerWidth, height = width / ratio, height > window.innerHeight && (height = window.innerHeight, width = height * ratio), (width > window.innerWidth || width + 60 > window.innerWidth) && (width = window.innerWidth), (height > window.innerHeight || height + 60 > window.innerHeight) && (height = window.innerHeight)) : window.innerWidth > window.innerHeight ? (height = window.innerHeight, width = height * ratio, width > window.innerWidth && (width = window.innerWidth, height = width / ratio)) : (width = window.innerWidth, height = width / ratio, height > window.innerHeight && (height = window.innerHeight, width = height * ratio))}
+
+function setTheLanguage (e) {
+  var t = ["en", "br", "pt", "es", "nl", "fr", "it", "de", "ja", "tr", "he", "ru"], i = t.indexOf(GamePix.lang()),
+    n = "en";
+  -1 != i && (n = GamePix.lang()), "pt" == n ? localStorage.setItem("com.gamepix.ctrexperiments.en", "br") : localStorage.setItem("com.gamepix.ctrexperiments.en", n)
+}
+
+function onDocumentLoaded () {
+
+  Module.canvas.addEventListener("touchstart", function(e) {}, !0), setTheLanguage(GamePix.lang());
+  var e = document.createElement("script");
+  e.type = "text/javascript", e.src = "bin-lock.js", e.onload = function() {
+    var e = document.createElement("memScript");
+    e.type = "text/javascript", e.src = "bin-lock.js.mem", document.body.appendChild(e)
+  }, document.body.appendChild(e)
+}
+
+var height, width, hidden_gpx, visibilityChange, ratio = .66, lastProgress = 100, resourceCount = 1,
+  canvas = document.getElementById("canvas"),
+  isMobile = function() {return !!/Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Tablet PC|Opera Mini/i.test(navigator.userAgent)}(),
+  Module = {
+    preRun: [],
+    postRun: [],
+    print: function(e) {},
+    printErr: function(e) {},
+    canvas: canvas,
+    setStatus: function(e) {
+      Module.setStatus.interval && clearInterval(Module.setStatus.interval);
+      var t = e.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/), i = {};
+      t ? (e = t[1], i.value = 100 * parseInt(t[2]), i.max = 100 * parseInt(t[4]), i.hidden = !1) : i.value = i.max;
+      var n = 100 * i.value / i.max | 0;
+      n > 0 && lastProgress != n && (lastProgress = n, GamePix.game.gameLoading(lastProgress))
+    },
+    totalDependencies: 0,
+    monitorRunDependencies: function(e) {this.totalDependencies = Math.max(this.totalDependencies, e), e ? Module.setStatus("Preparing... (" + (this.totalDependencies - e) + "/" + this.totalDependencies + ")") : this.totalDependencies > 1 && (Module.setStatus("All downloads completed"), onResourcesLoaded())}
+  };
+window.addEventListener ? window.addEventListener("click", function() {window.focus()}, !1) : window.attachEvent("onclick", function() {window.focus()}), document.addEventListener("contextmenu", function(e) {e.preventDefault()}, !1), "undefined" != typeof document.hidden ? (hidden_gpx = "hidden", visibilityChange = "visibilitychange") : "undefined" != typeof document.mozHidden ? (hidden_gpx = "mozHidden", visibilityChange = "mozvisibilitychange") : "undefined" != typeof document.msHidden ? (hidden_gpx = "msHidden", visibilityChange = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (hidden_gpx = "webkitHidden", visibilityChange = "webkitvisibilitychange"), "undefined" == typeof document.addEventListener || "undefined" == typeof document[hidden_gpx] || document.addEventListener(visibilityChange, handleVisibilityChange, !1), onDocumentLoaded();
+var isGpx = "undefined" != typeof GamePix;
+isGpx && (GamePix.on.pause = function() {_native_pause()}, GamePix.on.resume = function() {_native_resume()}, GamePix.on.soundOn = function() {_native_sound_on()}, GamePix.on.soundOff = function() {_native_sound_off()})
+  </script>
+ </body>
+</html>
