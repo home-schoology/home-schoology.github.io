@@ -91,16 +91,16 @@
   <body>
     <div id="gameContainer"></div>
     <div id="loader">
-      <img class="logo" src="Build/logo.png">
+      <img class="logo" src="tybsi/logo.png">
       <div class="spinner"></div>
       <div class="progress"><div class="full"></div></div>
     </div>
   </body>
 
-  <script src="Build/UnityLoader.js"></script>
-  <script src='Build/kongregate_api.js'></script>
+  <script src="tybsi/UnityLoader.js"></script>
+  <script src='tybsi/kongregate_api.js'></script>
   <script>
-  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json", {onProgress: UnityProgress});
+  var gameInstance = UnityLoader.instantiate("gameContainer", "tybsi/Web.json", {onProgress: UnityProgress});
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
