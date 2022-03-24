@@ -9,6 +9,8 @@ Abdess for GameBoy bios (even though I did not use any)
 
 https://github.com/Abdess/retroarch_system
 
-Ruffle
+Ruffle and me for flash with url params
 
 https://github.com/ruffle-rs/ruffle
+
+https://github.com/home-schoology/home-schoology.github.io/
