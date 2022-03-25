@@ -1,3 +1,9 @@
+# guide
+meanings of filenames:
+
+lets use 1v1s1v1.html as an example;
+
+
 # credits
 ReedGraf and Ethanaobrien for emulator stuff
 
