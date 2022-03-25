@@ -1,9 +1,9 @@
 # guide
 meanings of filenames:
 
-The way it goes is game-server-version (or gsv);
+The way it goes is Game-ServerVersion (or G-SV);
 
-Lets use 1v1s1v1.html as an example; the game is 1v1 (1v1.lol), the server is s1 (s stands for server), and version is v1 (v stands for version).
+Lets use 1v1-s1v1.html as an example; the game is 1v1 (1v1.lol), the server is s1 (s stands for server), and version is v1 (v stands for version).
 The server is the number corrisponding with the source of the game, and version is the method used to display the game/what the layout of the game is.
 
 
