@@ -1,10 +1,6 @@
 # Guide
-## Meanings of files
 
-The method it follows is GSV (Game Server Version);
-
-Lets use "1v1-s1v1.html" as an example; "1v1" is the game (1v1.lol), "s1" is the server (server 1), and "v1" is the version.
-## Meanings of files 2
+## Files
 ### Games
 Games are just the game name (may be edited to be smaller).
 
@@ -19,6 +15,10 @@ Versions are the method the games are displayed/activated, these are the same fo
 If a version's value is not there, and in its place is the word "flat", it means the game is not from an external source (file is self hosted).
 
 # Frequrently asked questions (FAQ)
+`Q: "What do the file names mean?"`
+
+`A: The method it follows is GSV (Game Server Version); Lets use "1v1-s1v1.html" as an example; "1v1" is the game (1v1.lol), "s1" is the server (server 1), and "v1" is the version.`
+
 
 # Credits
 ReedGraf and Ethanaobrien for emulator stuff
