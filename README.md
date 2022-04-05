@@ -12,7 +12,7 @@ Servers represent the source of the game, so server 1 could be a link (lets say 
 ### Versions
 Versions are the method the games are displayed/activated, these are the same for every game (version 1 is version 1 for every game, and version 2 is version 2 for every game). 
 
-If a version's value is not there, and in its place is the word "flat", it means the game is not from an external source (file is self hosted).
+If a version's value is the word "File" instead of a number, it means the game is not from an external source (file is self hosted).
 
 # Frequrently asked questions (FAQ)
 `Q: "What do the file names mean?"`
