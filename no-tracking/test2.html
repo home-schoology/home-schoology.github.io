@@ -26,8 +26,8 @@
         function onLoad() {
           if (win) {
           location.replace("about:blank");
-          location.replace("https://www.google.com");
           window.close();
+          win.focus();
           } 
           else {
             win = window.open();
