@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-location.replace("about:blank");
-const content = document.createElement("c");
-content.innerHTML = '<iframe style="position:absolute; height:100%; border:none" src="https://www.bad-neighborhood.com/htmlhashing.htm"></iframe>';
-document.body.appendChild(content);
-</script>
-<script async src="https://arc.io/widget.min.js#nnUFwP4e"></script>
-</head>
+  <script>
+    function openPage() {
+      var win;
+      win = window.open();
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      var iframe = win.document.createElement("iframe");
+      iframe.style.border = "none";
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.margin = "0";
+      iframe.src = url;
+      win.document.body.appendChild(iframe);
+    }
+  </script>
+  <body onload="openPage()"></body>
 </html>
-
