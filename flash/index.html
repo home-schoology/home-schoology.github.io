@@ -21,13 +21,12 @@ setup: function() { document.getElementByID("title").innerHTML = return this.tab
 siteSettings.setup();
 
 const ruffleSettings = {
-pathtoRuffle:"https://home-schoology.github.io/flash/",
-ruffleName: "ruffle.js",
-ruffleURL: function() { return this.pathtoRuffle + this.ruffleName;}};
+pathToRuffle:"https://home-schoology.github.io/flash/",
+pathToScript: "https://home-schoology.github.io/flash/ruffle.js";};
 	
 let params = new URLSearchParams(document.location.search);
 let gamefile = params.get("gamefile");
-document.getElementById("gamebox").innerHTML = ''+"<"+'embed id="gbEmbed" src="'+ gamefile +'" width="700" height="600"'+"></"+'embed'+"><"+'script src="'+ ruffleSettings.ruffleURL() +'"'+"></"+'script'+">"+''
+document.getElementById("gamebox").innerHTML = ''+"<"+'embed id="gbEmbed" src="'+ gamefile +'" width="700" height="600"'+"></"+'embed'+"><"+'script src="'+ ruffleSettings.pathToScript() +'"'+"></"+'script'+">"+''
 </script>
 
 <div id="gamebox"></div>
